@@ -12,15 +12,17 @@ Order by dannys_diner.sales.customer_id;
 
 
 
-
-
-
-
-
-
-
-
 -- 2. How many days has each customer visited the restaurant?
+
+
+
+SELECT dannys_diner.sales.customer_id, Count (dannys_diner.sales.order_date) as number_of_day
+FROM dannys_diner.sales
+Group by dannys_diner.sales.customer_id;
+
+
+
+
 -- 3. What was the first item from the menu purchased by each customer?
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 -- 5. Which item was the most popular for each customer?
